@@ -1,0 +1,29 @@
+html {
+  box-sizing: border-box;
+}
+
+#containerDiv {
+  border: 2px solid orange;
+  display: grid;
+  grid-template-rows: 100px 600px;
+  grid-template-columns: 200px auto;
+}
+
+#headerDiv {
+  background-color: blue;
+
+  grid-column: 1 / 3;
+  grid-row: 1, 2;
+}
+
+#toolbarDiv {
+  background-color: green;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+#bodyDiv {
+  background-color: brown;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
