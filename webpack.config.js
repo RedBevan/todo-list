@@ -26,6 +26,8 @@ module.exports = {
               name: "fonts/[name].[ext]",
             },
           },
+        ], // <-- Added the missing closing brace here
+      },
     ],
   },
 };
