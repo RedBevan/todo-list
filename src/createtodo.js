@@ -3,38 +3,28 @@ function createtodo() {
 
   let todos = [];
 
-  function addNewTodo() {
+  const addNewTodo = () => {
+    let nameInput = document.getElementById("nameInput");
+    console.log(nameInput.value);
     console.log("There's something to do!");
-  }
+    if (nameInput.value.trim() !== "") {
+      const todoName = nameInput.value;
+      nameInput.value = "";
 
-  // // Check if todos are in local storage
-  // if (localStorage.getItem("todos")) {
-  //   todos = JSON.parse(localStorage.getItem("todos"));
-  //   renderTodoList();
-  // }
+      const todoItemId = Date.now();
 
-  // const addNewTodo = () => {
-  //   console.log("There's something to do!");
-  //   if (nameInput.value.trim() !== "") {
-  //     const todoName = nameInput.value;
-  //     nameInput.value = "";
+      const newTodoItem = {
+        id: todoItemId,
+        text: todoName,
+        isComplete: false,
+      };
 
-  //     // Set todo ID to number of ms elapsed since the epoch. This ensures no two todos have the same ID.
-  //     const todoItemId = Date.now();
+      todos.push(newTodoItem);
+      localStorage.setItem("todos", JSON.stringify(todos));
 
-  //     const newTodoItem = {
-  //       id: todoItemId,
-  //       name: todoName,
-  //       isComplete: false,
-  //     };
-
-  //     todos.push(newTodoItem);
-  //     localStorage.setItem("todos", JSON.stringify(todos));
-
-  // //     renderTodoList();
-  // //     updateItemsLeft();
-  // //   }
-  // // };
+      console.log(todos);
+    }
+  };
 
   return { addNewTodo };
 }

@@ -69,6 +69,7 @@ function pageLoad() {
 
   const nameInput = document.createElement("input");
   nameInput.type = "text";
+  nameInput.id = "nameInput";
   nameFieldset.appendChild(nameInput);
 
   const submitBtn = document.createElement("button");

@@ -28,6 +28,13 @@ module.exports = {
           },
         ], // <-- Added the missing closing brace here
       },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
+      },
     ],
   },
 };
