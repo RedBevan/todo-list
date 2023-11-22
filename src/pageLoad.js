@@ -80,6 +80,7 @@ function pageLoad() {
   submitBtn.addEventListener("click", () => {
     event.preventDefault();
     addNewTodo(nameInput.value);
+    nameInput.value = "";
   });
 
   const todoDiv = document.createElement("div");

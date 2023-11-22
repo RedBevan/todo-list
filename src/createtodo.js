@@ -14,6 +14,7 @@ function createtodo() {
   // }
 
   // const addNewTodo = () => {
+  //   console.log("There's something to do!");
   //   if (nameInput.value.trim() !== "") {
   //     const todoName = nameInput.value;
   //     nameInput.value = "";
@@ -30,10 +31,10 @@ function createtodo() {
   //     todos.push(newTodoItem);
   //     localStorage.setItem("todos", JSON.stringify(todos));
 
-  //     renderTodoList();
-  //     updateItemsLeft();
-  //   }
-  // };
+  // //     renderTodoList();
+  // //     updateItemsLeft();
+  // //   }
+  // // };
 
   return { addNewTodo };
 }

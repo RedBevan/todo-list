@@ -51,9 +51,26 @@ body {
   background-color: #233078;
   grid-column: 1 / 2;
   grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#bodyDiv {
+#toolbarDiv > #newTodoBtn {
+  background-color: #000d56;
+  color: white;
+  margin: 10px;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+#toolbarDiv > #newTodoBtn:hover {
+  background-color: #0a165a;
+}
+
+#toolbarDiv > #newTodoBtn #bodyDiv {
   background-color: #4d5999;
   grid-column: 2 / 3;
   grid-row: 2 / 3;
