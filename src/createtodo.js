@@ -1,7 +1,11 @@
+import renderTodos from "./renderTodoList.js";
+
+const { renderTodoList, getTodos } = renderTodos(); // a concise way of saying, "Call the renderTodos function and give me the renderTodoList property from the result, and store it in a variable named renderTodoList."
+
 function createtodo() {
   console.log("Nothing to do yet");
 
-  let todos = [];
+  let todos = getTodos(); // Get the reference to the todos array
 
   const addNewTodo = () => {
     let nameInput = document.getElementById("nameInput");
@@ -23,6 +27,7 @@ function createtodo() {
       localStorage.setItem("todos", JSON.stringify(todos));
 
       console.log(todos);
+      renderTodoList();
     }
   };
 

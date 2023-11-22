@@ -80,6 +80,7 @@ function pageLoad() {
 
   submitBtn.addEventListener("click", () => {
     event.preventDefault();
+    inputDiv.classList.toggle("hidden");
     addNewTodo(nameInput.value);
     nameInput.value = "";
   });
