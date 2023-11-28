@@ -106,11 +106,50 @@ body {
 }
 
 #bodyDiv > #todoDiv {
-  background-color: coral;
   height: 200px;
-  width: 200px;
+  width: 300px;
 
   margin: 20px;
+}
+
+.todo-card {
+  border: 2px solid #233078;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 20px;
+  color: #233078;
+  background-color: #2330784d;
+}
+
+.todo-card .deleteBtn {
+  background-color: #000d56;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.todo-card .deleteBtn:hover {
+  background-color: #0a165a;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 50%;
+}
+
+.inTrash {
+  display: none;
+}
+
+.todo-card .todo {
+  margin: 20px;
+}
+
+input[type="checkbox"] {
+  font-size: 32px !important;
+  background-color: black !important;
 }
 
 #footerDiv {

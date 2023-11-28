@@ -21,6 +21,7 @@ function createtodo() {
         id: todoItemId,
         text: todoName,
         isComplete: false,
+        inTrash: false,
       };
 
       todos.push(newTodoItem);
